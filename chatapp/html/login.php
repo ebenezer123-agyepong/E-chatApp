@@ -15,14 +15,14 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="form_signup">
+        <section class="form_signup login">
             <header>E-Chat App</header>
             <p class="header_info">Sign-in</p>
-            <form action="">
-                <div class="error_text">This is an error message</div>
+            <form action="#">
+                <div class="error_text"></div>
                 <div class="client_details">
                     <div class="inputBox">
-                        <input type="text" name="Email" required="required" >
+                        <input type="text" name="email" required="required" >
                         <span>Email Address</span>
                     </div>
                     <div class="inputBox">
@@ -33,7 +33,7 @@
                     <div class="password_reset">
                         <a href="#">Forgot password?</a>
                     </div>
-                    <div class="inputBox">
+                    <div class="inputBox button">
                         <input type="submit" value="Login">
                     </div>
                 </div>
@@ -42,5 +42,6 @@
         </section>
     </div>
     <script src="../Javascripts/pass-togel.js"></script>
+    <script src="../Javascripts/login.js"></script>
 </body>
 </html>

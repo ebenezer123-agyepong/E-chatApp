@@ -1,0 +1,163 @@
+.main {
+  width: 100%;
+}
+
+.main__side-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color: var(--info);
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: width .5s ease-in;
+}
+
+.main__side-drawer--show {
+  z-index: 5;
+  opacity: 1;
+  visibility: visible;
+  padding: 10px;
+  width: 70%;
+}
+
+.main__content {
+  color: var(--secondary);
+  background-color: var(--light);
+}
+
+.main__link,
+.main__link:link,
+.main__link:visited {
+  display: block;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: var(--light);
+  text-decoration: none;
+}
+
+.main__link:hover,
+.active {
+  background-color: var(--light);
+  color: var(--secondary) !important;
+}
+
+.main__link-btn,
+.main__link-form-btn {
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  font: inherit;
+  background-color: transparent;
+}
+
+.main__link-btn {
+  color: var(--secondary);
+}
+
+.main__link-form-btn {
+  width: 100%;
+  text-align: left;
+}
+
+.main__link-btn:hover {
+  background-color: var(--info);
+  color: var(--light) !important;
+}
+
+.main__link:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.main__content-collapse {
+  position: relative;
+}
+
+.main__collapse {
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  background-color: var(--info);
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  transform: translateY(-10px);
+  transition: transform .5s ease-in;
+}
+
+.main__collapse--show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+
+@media (min-width: 768px) {
+  .main {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .main__link-drawer {
+    display: none;
+  }
+
+  .main__side-drawer {
+    flex-basis: 22%;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    padding: 10px;
+  }
+
+  .main__content {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  30% {
+    right: 20px;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  60% {
+    right: 20px;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  70% {
+    right: 20px;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  100% {
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.alert-modal {
+  animation: slide-in 2s ease-in .5s both;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 5;
+}

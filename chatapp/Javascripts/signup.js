@@ -15,7 +15,7 @@ continueBtn.onclick = ()=>{
             if(xhr.status === 200){
                 let data = xhr.response;
                 if(data == "success"){
-
+                    location.href ="./users.php";
                 }else{
                     errorTest.style.display = "block";
                     errorTest.textContent = data;
@@ -26,6 +26,4 @@ continueBtn.onclick = ()=>{
     //we have to send the form data through ajax to php
     let formData = new FormData(form); //creating new form data object
     xhr.send(formData);//sending the form data to php
-
-
 }
