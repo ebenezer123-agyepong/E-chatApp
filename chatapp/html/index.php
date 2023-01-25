@@ -12,35 +12,35 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="form singup">
+        <section class="form signup">
             <header>E-Chat App</header>
             <p class="header_info">Create an account</p>
-            <form action="">
-                <div class="error_text">This is an error message </div>
+            <form action="#" enctype="multipart/form-data">
+                <div class="error_text"></div>
                 <div class="client_details">
                     <div class="inputBox">
-                        <input type="text" name="fName" required="required" >
+                        <input type="text" name="fname" required="required" >
                         <span>First Name</span>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="lName" required="required">
+                        <input type="text" name="lname" required="required">
                         <span>Last Name</span>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="Email" id="Email_address" required="required" >
+                        <input type="text" name="email" id="Email_address" required="required" >
                         <span>Email Address</span>
                     </div>
                     <div class="inputBox">
-                        <input type="password"  required="required" id="password" >
+                        <input type="password" name="password" required="required" id="password" >
                         <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
                         <span>Password</span>
                     </div>
                     <div class="field">
                         <label>Select image</label>
-                        <input type="file">
+                        <input type="file" name="image">
                     </div>
                     <p class="terms_condition">By clicking on sign-up you agree to our <a href="#">Terms|Privacy</a> </p>
-                    <div class="inputBox">
+                    <div class="inputBox button" >
                         <input type="submit" id="signUp" value="Sign Up">
                     </div>
                 </div>
