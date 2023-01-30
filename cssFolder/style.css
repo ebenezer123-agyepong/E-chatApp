@@ -58,3 +58,8 @@
 }
 
 /*==================FONTS_SIZE for LARGE DEVICE===========*/
+@media screen and (min-width: 968px) {
+    :root{
+        
+    }
+}
