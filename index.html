@@ -103,7 +103,7 @@
                     </div>
 
                     <div class="home__data">
-                        <h1 class="home__title"> Hi, I'am Eben</h1>
+                        <h1 class="home__title"> Hi, I am Eben</h1>
                         <h3 class="home__subtitle">Frontend Developer</h3>
                         <p class="home__description">
                             High level experience in web design and development 
@@ -280,12 +280,12 @@
 
             <div class="qualification__container container">
                 <div class="qualification__tabs">
-                    <div class="qualification__button button--flex">
+                    <div class="qualification__button button--flex qualification__active" data-target="#education">
                         <i class="uil uil-graduation-cap qualification__icon"></i>
                         Education
                     </div>
 
-                    <div class="qualification__button button--flex">
+                    <div class="qualification__button button--flex " data-target="#work" >
                         <i class="uil uil-briefcase-alt qualification__icon"></i>
                         Work
                     </div>
@@ -293,7 +293,7 @@
 
                 <div class="qualifiction__sections">
                  <!--=================== QUALIFICATION CONTENT 1 ========================-->
-                    <div class="qualification__content qualification__active" data-content id="education">
+                    <div class="qualification__content qualification__active" data-content id="#education">
                         <!--=================== QUALIFICATION 1 ========================-->
                         <div class="qualification__data">
                             <div>
@@ -304,11 +304,11 @@
                                     2022 - 2023
                                 </div>
                             </div>
-
                             <div>
                                 <span class="qualification__rounder"></span>
                                 <span class="qualification__line"></span>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -328,8 +328,8 @@
                                 2022 - 2023
                             </div>
                         </div>
-
                     </div>
+                    
 
                      <!--=================== QUALIFICATION CONTENT 2 ========================-->
                      <div class="qualification__content" data-content id="work">
@@ -416,8 +416,145 @@
                         </div>
                     </div>
                 </div>
+
+                <!--==================== SERVICES 2 ==================-->
+                <div class="service__content">
+                    <div>
+                        <i class="uil uil-arrow service__icon"></i>
+                        <h3 class="services__title">Frontend <br> Developer</h3>
+                    </div>
+                    <span class="button button--flex button--small button--link service__button">
+                        View More
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </span>
+                    
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-tittle">>Frontend <br> Developer</h4>
+                            <i class="uil uil-times services__modal-close"></i>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I develope the user interface.</p>
+                                </li>
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Webpage development.</p>
+                                </li>
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I position your company brand.</p>
+                                </li>
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I develope the user interface.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== SERVICES 3 ==================-->
+                <div class="service__content">
+                    <div>
+                        <i class="uil uil-pen service__icon"></i>
+                        <h3 class="services__title">Branding <br> Designer</h3>
+                    </div>
+                    <span class="button button--flex button--small button--link service__button">
+                        View More
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </span>
+                    
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-tittle">Branding <br> Designer</h4>
+                            <i class="uil uil-times services__modal-close"></i>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I develope the user interface.</p>
+                                </li>
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Webpage development.</p>
+                                </li>
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I position your company brand.</p>
+                                </li>
+                                <li class="services___modal-services">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I develope the user interface.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </section>
+        </section>
+        
+        <!--==================== PORTFOLIO ==================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle">Most recent work</span>
+
+            <div class="portfolio__container container">
+                <div>
+                <!--==================== PORTFOLIO 1 ==================-->
+                    <div class="portfolio__content grid">
+                        <img src="./pictures/Screenshot (10).png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Modern Website</h3>
+                            <p class="portfolio__description">
+                                A Website adaptable to all devises,
+                                with best ui components and animated interaction.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">
+                                DEMO
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 2 ==================-->
+                    <div class="portfolio__content grid">
+                        <img src="./pictures/Screenshot (10).png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Modern Website</h3>
+                            <p class="portfolio__description">
+                                A Website adaptable to all devises,
+                                with best ui components and animated interaction.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">
+                                DEMO
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 3 ==================-->
+                    <div class="portfolio__content grid">
+                        <img src="./pictures/Screenshot (10).png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Modern Website</h3>
+                            <p class="portfolio__description">
+                                A Website adaptable to all devises,
+                                with best ui components and animated interaction.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">
+                                DEMO
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="./javaScript/script.js"></script>
 </body>
