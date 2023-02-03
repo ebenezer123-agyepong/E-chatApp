@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!--===========Google FOnt=================-->
 
+      <!--===========Swiper CSS =================-->
+    <link rel="stylesheet" href="./cssFolder/swiper-bundle.min.css">
 </head>
 <body>
     <!--========================HEADER==================-->
@@ -500,10 +502,10 @@
             <h2 class="section__title">Portfolio</h2>
             <span class="section__subtitle">Most recent work</span>
 
-            <div class="portfolio__container container">
-                <div>
+            <div class="portfolio__container container swiper mySwiper">
+                <div class="swiper-wrapper">
                 <!--==================== PORTFOLIO 1 ==================-->
-                    <div class="portfolio__content grid">
+                    <div class="portfolio__content grid swiper-slide">
                         <img src="./pictures/Screenshot (10).png" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
@@ -520,7 +522,7 @@
                     </div>
 
                     <!--==================== PORTFOLIO 2 ==================-->
-                    <div class="portfolio__content grid">
+                    <div class="portfolio__content grid swiper-slide">
                         <img src="./pictures/Screenshot (10).png" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
@@ -537,7 +539,7 @@
                     </div>
 
                     <!--==================== PORTFOLIO 3 ==================-->
-                    <div class="portfolio__content grid">
+                    <div class="portfolio__content grid swiper-slide">
                         <img src="./pictures/Screenshot (10).png" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
@@ -553,9 +555,19 @@
                         </div>
                     </div>
                 </div>
+
+                <!--===== ADD ARROWS ====-->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                 <!--===== ADD PAGINATION ====-->
+                 <div class="swiper-pagination"></div>
             </div>
         </section>
     </main>
     <script src="./javaScript/script.js"></script>
+    
+      <!--===========SWIPER JS=================-->
+    <script src="./javaScript/swiper-element-bundle.js"></script>
 </body>
 </html>
