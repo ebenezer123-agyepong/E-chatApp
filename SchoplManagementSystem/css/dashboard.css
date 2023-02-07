@@ -1,0 +1,27 @@
+ .dashboard_heading{
+    padding: 1% 4%;
+    font-size: 34px;
+    color: var(--first-color);
+    width: 20%;
+ }
+
+ .welcome_admin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .welcome_admin_message{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background-color: var(--first-color);
+    color: var(--color-white);
+    padding: 20px;
+    margin: 15px 0px;
+
+ }
+
+ .welcome_admin_message h1{
+    margin: 0px 10px;
+ }

@@ -13,6 +13,7 @@
     <?php echo "Request <br>"; ?>
     <?php echo "Response <br>"; ?>
 
-    <a href ="./intro.php">Go to introduction to php</a>
+    <a href ="./intro.php">Go to introduction</a> <br>
+    <a href ="./project.php">Go to project</a>
 </body>
 </html>
