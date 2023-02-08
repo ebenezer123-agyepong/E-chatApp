@@ -17,6 +17,161 @@
                     }
                 ?>
             </h1>
+            <h1 class="admin_name">Ebenezer Agyepong</h1>
+            <h1 class="current_date"><?php echo date('M d, Y'); ?></h1>
+        </div>
+    </div>
+    <div class="cover-img">
+        <img src="./images/school_bulding.jpg" alt="cover image">
+        <span class="text">
+            <h1>Eben School System</h1>
+            <p>
+                Education is the key to future success, for tomorrow belongs
+                to people who prepare for it. 
+            </p>
+        </span>
+    </div>
+</section>
+<section class="all-info">
+    <div class="row">
+        <div class="col">
+            <div id="teacher" class="card">
+                    <div class="teacher-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="teacherCount">01</h1>
+                                <p>Teacher</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
+            <div id="attendance" class="card">
+            <div class="attendance-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="examsCount">01</h1>
+                                <p>Exams</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-user-plus"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div id="teacher" class="card">
+                    <div class="teacher-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="teacherCount">01</h1>
+                                <p>Teacher</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
+            <div id="attendance" class="card">
+            <div class="attendance-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="examsCount">01</h1>
+                                <p>Exams</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-user-plus"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div id="teacher" class="card">
+                    <div class="teacher-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="teacherCount">01</h1>
+                                <p>Teacher</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
+            <div id="attendance" class="card">
+            <div class="attendance-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="examsCount">01</h1>
+                                <p>Exams</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-user-plus"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div id="teacher" class="card">
+                    <div class="teacher-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="teacherCount">01</h1>
+                                <p>Teacher</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
+            <div id="attendance" class="card">
+            <div class="attendance-inner">
+                        <div class="column column-left">
+                            <div class="column-left-inner">
+                                <h1 id="examsCount">01</h1>
+                                <p>Exams</p>
+                            </div>
+                        </div>
+                        <div class="column column-right">
+                            <i class="far fa-user-plus"></i>
+                        </div>
+                    </div>
+                    <div class="teacher-footer">
+                        <a href="#">More Info <i class="fas fa-angle-double-alt"></i></a>
+                    </div>
+            </div>
         </div>
     </div>
 </section>

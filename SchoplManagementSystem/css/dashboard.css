@@ -1,3 +1,37 @@
+
+/*=======================Css Variables=====================*/
+
+:root{
+   --header-height: 6rem;
+
+/*========Colors========*/
+
+   --hue-color: 230;
+
+/*==========Hxl color mode================*/
+   --first-color:hsl(var(--hue-color),69%,61%);
+   --color-white: #fff;
+   --first-color-second:hsl(var(--hue-color),69%,61%);
+   --first-color-alt:hsl(var(--hue-color),57%,53%);
+   --first-color-lighter:hsl(var(--hue-color),92%,85%);;
+   --title-color:hsl(var(--hue-color),8%,15%);
+   --text-color:hsl(var(--hue-color),8%,45%);
+   --text-color-light:hsl(var(--hue-color),8%,65%);
+   --input-color:hsl(var(--hue-color),70%,96%);
+   --body-color:hsl(var(--hue-color),60%,99%);
+   --container-color:#fff;
+
+/*===============FONTS======================*/
+   --body-font:'poppins', sans-serif;
+
+}
+
+ *{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+
  .dashboard_heading{
     padding: 1% 4%;
     font-size: 34px;
@@ -9,6 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
  }
 
  .welcome_admin_message{
@@ -19,9 +54,77 @@
     color: var(--color-white);
     padding: 20px;
     margin: 15px 0px;
-
+    border-radius: 5px;
  }
 
  .welcome_admin_message h1{
     margin: 0px 10px;
+ }
+
+ .welcome_admin .admin_name{
+   font-size: 35px;
+   color: var(--color-white);
+ }
+
+ .welcome_admin .current_date{
+   font-size: 35px;
+   margin-left: 200px;
+ }
+
+ .dashboard .cover-img img{
+   width: 100%;
+   height: 40vh;
+   object-fit: cover;
+ }
+ 
+ .dashboard .cover-img .text{
+   position: absolute;
+   top: 30%;
+   left: 30%;
+ }
+
+ .dashboard .cover-img .text h1{
+   font-size: 70px;
+ }
+
+ .dashboard .cover-img .text p{
+   font-size: 23px;
+ }
+
+ .all-info{
+   background-color: #f0f1f3;
+ }
+
+ .all-info .row{
+   display: flex;
+   width: 96%;
+   margin: auto;
+   border: 1px solid var(--first-color-second);
+   justify-content: space-between;
+ }
+
+ .all-info .row .col{
+   width: 24%;
+   border: 1px solid var(--first-color-second);
+ }
+
+ .all-info .row .col .card{
+   width: 100%;
+   margin: 6% 0px;
+   border: 1px solid var(--first-color-second);
+ }
+
+ .all-info .row .col .card .teacher-inner{
+   display: flex;
+   background-color: var(--first-color);
+   padding: 10px 0px;
+ }
+
+ .all-info .row .col .card .teacher-inner .column{
+   width: 49%;
+   border: 1px solid green;
+ }
+
+ .all-info .row .col .card .teacher-inner .column-left{
+   
  }
