@@ -101,14 +101,18 @@
     display: none;
 }
 
+
+
 .admin-top .row .admin-left .tab .tablinks h4{
     margin: 0px 0px 0px 15px;
+    
 }
 
 
 .admin-top .row .admin-left .tab .tablinks.active{
     background-color: var(--color-white);
     color: var(--first-color-second);
+
 }
 
 .admin-top .row .admin-left .tab .tablinks:hover{
@@ -159,7 +163,7 @@
     background-color: var(--first-color);
 }
 
-.admin-top .row .admin-right .header .header-left .fas{
+.admin-top .row .admin-right .header .header-left .menu-bars{
     font-size: 25px;
     cursor: pointer;
 }

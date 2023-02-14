@@ -32,6 +32,61 @@
    box-sizing: border-box;
  }
 
+ .cover-img{
+  width: 100%;
+  height: 53vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url('../images/building.jpg')no-repeat;
+	background-position: center;
+	background-size: fill;
+  object-fit: cover;
+	animation:  changeBackground 30s ease-in infinite;
+}
+
+
+@keyframes changeBackground{
+	0%{
+		background: url('../images/just-daisy-BlCJi8walFQ-unsplash.jpg')no-repeat;
+		background-position: center;
+		background-size: fill;
+		object-fit: contain;
+		background-repeat: no-repeat;
+	
+	
+
+	}
+
+	30%{
+		background: url('../images/wander-fleur-1lmGTHdQdjM-unsplash.jpg')no-repeat;
+		background-position: center;
+		background-size: fill;
+		object-fit: contain;
+		background-repeat: no-repeat;
+
+	}
+
+	60%{
+		background: url('../images/school_bulding.jpg')no-repeat;
+		background-position: center;
+		background-size: fill;
+		object-fit: contain;
+		background-repeat: no-repeat;
+
+	}
+
+	100%{
+		background: url('../images/just-daisy-BlCJi8walFQ-unsplash.jpg')no-repeat;
+		background-position: center;
+		background-size: fill;
+		object-fit: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+
+
  .dashboard_heading{
     padding: 1% 4%;
     font-size: 34px;
@@ -72,10 +127,12 @@
  }
 
  .dashboard .cover-img img{
+
    width: 100%;
    height: 40vh;
    object-fit: cover;
  }
+
  
  .dashboard .cover-img .text{
    position: absolute;
@@ -99,32 +156,303 @@
    display: flex;
    width: 96%;
    margin: auto;
-   border: 1px solid var(--first-color-second);
    justify-content: space-between;
  }
 
  .all-info .row .col{
    width: 24%;
-   border: 1px solid var(--first-color-second);
  }
 
  .all-info .row .col .card{
    width: 100%;
    margin: 6% 0px;
-   border: 1px solid var(--first-color-second);
  }
 
- .all-info .row .col .card .teacher-inner{
+ .all-info .row .col .card .teacher-inner,
+ .all-info .row .col .card .library-inner{
    display: flex;
    background-color: var(--first-color);
    padding: 10px 0px;
  }
 
- .all-info .row .col .card .teacher-inner .column{
+ .all-info .row .col .card .teacher-inner .column,
+ .all-info .row .col .card .accountants-inner .column,
+ .all-info .row .col .card .parents-inner .column,
+ .all-info .row .col .card .stuff-inner .column,
+ .all-info .row .col .card .library-inner .column,
+ .all-info .row .col .card .notice-inner .column,
+ .all-info .row .col .card .student-inner .column
+ {
    width: 49%;
-   border: 1px solid green;
  }
 
- .all-info .row .col .card .teacher-inner .column-left{
-   
+ .all-info .row .col .card .teacher-inner .column-left,
+ .all-info .row .col .card .accountants-inner .column-left,
+ .all-info .row .col .card .parents-inner .column-left,
+ .all-info .row .col .card .stuff-inner .column-left,
+ .all-info .row .col .card .library-inner .column-left,
+ .all-info .row .col .card .notice-inner .column-left,
+ .all-info .row .col .card .student-inner .column-left{
+   display: flex;
+   align-items: center;
+   padding: 0px 10px;
  }
+
+ .all-info .row .col .card .teacher-inner .column-left h1,
+ .all-info .row .col .card .accountants-inner .column-left h1,
+ .all-info .row .col .card .parents-inner .column-left h1,
+ .all-info .row .col .card .stuff-inner .column-left h1,
+ .all-info .row .col .card .library-inner .column-left h1,
+ .all-info .row .col .card .notice-inner .column-left h1,
+ .all-info .row .col .card .student-inner .column-left h1{
+   font-size: 60px;
+ }
+
+ .all-info .row .col .card .teacher-inner .column-right,
+ .all-info .row .col .card .accountants-inner .column-right,
+ .all-info .row .col .card .parents-inner .column-right,
+ .all-info .row .col .card .stuff-inner .column-right,
+ .all-info .row .col .card .library-inner .column-right,
+ .all-info .row .col .card .notice-inner .column-right,
+ .all-info .row .col .card .student-inner .column-right{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+ }
+
+
+ .all-info .row .col .card .teacher-inner .column-right .fa-chart-bar,
+ .all-info .row .col .card .accountants-inner .column-right .fa-hotel,
+ .all-info .row .col .card .parents-inner .column-right .fa-users,
+ .all-info .row .col .card .stuff-inner .column-right .fa-bus,
+ .all-info .row .col .card .library-inner .column-right .fa-book-open-reader,
+ .all-info .row .col .card .student-inner .column-right .fa-user-plus,
+ .all-info .row .col .card .notice-inner .column-right .fa-calendar-days,
+ .all-info .row .col .card .attendance-inner .column-right .fa-graduation-cap
+ {
+   font-size: 80px;
+   color: #ccc;
+   padding: 0px 7px;
+   opacity: 0.4;
+ }
+
+ .all-info .row .col .card .teacher-footer,
+ .all-info .row .col .card .library-footer{
+   text-align: center;
+   padding: 5px 0px;
+   background-color: var(--first-color);
+ }
+
+ .all-info .row .col .card .teacher-footer a,
+ .all-info .row .col .card .attendance-footer a,
+ .all-info .row .col .card .accountants-footer a,
+ .all-info .row .col .card .stuff-footer a,
+ .all-info .row .col .card .parents-footer a,
+ .all-info .row .col .card .library-footer a,
+ .all-info .row .col .card .notice-footer a,
+ .all-info .row .col .card .student-footer a{
+   text-decoration: none;
+   color: #ccc;
+ }
+
+ .all-info .row .col .attendance-inner,
+ .all-info .row .col .parents-inner{
+   display: flex;
+   background-color: orange;
+   padding: 10px 0px;
+ }
+
+ .all-info .row .col .card .attendance-inner .column{
+   width: 50%;
+  /* border: 1px solid green; */
+ }
+
+ .all-info .row .col .card .attendance-inner .column-left{
+   display: flex;
+   align-items: center;
+   padding: 0px 10px;
+ }
+
+ .all-info .row .col .card .attendance-inner .column-left h1{
+   font-size: 60px;
+ }
+
+ .all-info .row .col .card .attendance-inner .column-right{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+ }
+
+ .all-info .row .col .card .attendance-footer,
+ .all-info .row .col .card .parents-footer{
+   text-align: center;
+   padding: 5px 0px;
+   background-color: orange;
+ }
+
+/*======= Student and accountants css ======== */
+ .all-info .row .col .card .student-inner,
+ .all-info .row .col .card .notice-inner{
+   display: flex;
+   background-color: rgb(168, 46, 67);
+   padding: 10px 0px;
+ }
+
+ .all-info .row .col .card .student-footer,
+ .all-info .row .col .card .notice-footer{
+   text-align: center;
+   padding: 5px 0px;
+   background-color: rgb(168, 46, 67);
+ }
+
+ .all-info .row .col .card .accountants-inner,
+ .all-info .row .col .card .stuff-inner
+ {
+   display: flex;
+   background-color: rgb(30, 199, 120);
+   padding: 10px 0px;
+ }
+
+ .all-info .row .col .card .accountants-footer,
+ .all-info .row .col .card .stuff-footer{
+   text-align: center;
+   padding: 5px 0px;
+   background-color:  rgb(30, 199, 120);
+ }
+
+ /*===== Chart CSS ====== */
+.chart_left canvas,
+.chart_right canvas{
+    width: 400;
+    height: 400;
+}
+
+/*new */
+.chart .row {
+  width: 94%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f1f3;
+}
+.chart .row .chart_left,
+.chart_right {
+  padding: 25px;
+  width: 49%;
+  background-color: #fff;
+}
+.chart .row .chart_left h1 {
+  color: black;
+}
+.chart .row .chart_right h1 {
+  color: black;
+}
+.chart .row .chart_left canvas {
+  display: block;
+  margin: auto;
+}
+.chart .row .chart_left .chart_footer .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto 0px auto;
+  background-color: transparent;
+}
+.chart .row .chart_left .chart_footer .row .chart_footer_left {
+  width: 50%;
+  border-right: 2px solid #ddd;
+}
+.chart .row .chart_left .chart_footer .row .chart_footer_left hr {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 4px solid rgba(154, 205, 50, 1);
+  border-radius: 5px;
+  background-color: rgba(154, 205, 50, 1);
+  width: 70px;
+}
+.chart .row .chart_left .chart_footer .row .chart_footer_left span {
+  margin-bottom: 15px;
+  color: #a5b9d4;
+}
+.chart .row .chart_left .chart_footer .row .chart_footer_right hr {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 4px solid rgba(247, 202, 24, 1);
+  border-radius: 5px;
+  background-color: rgba(247, 202, 24, 1);
+  width: 70px;
+}
+.chart .row .chart_left .chart_footer .row .chart_footer_right span {
+  margin-bottom: 15px;
+  color: #a5b9d4;
+}
+
+/* teachers chart section start =========================== */
+.chart .row .chart_right .top_Male_female_chart {
+  display: flex;
+  justify-content: space-between;
+}
+.chart .row .chart_right .top_Male_female_chart button {
+  background-color: yellowgreen;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid yellowgreen;
+  border-radius: 3px 7px;
+}
+.chart .row .chart_right canvas {
+  display: block;
+  margin: auto;
+}
+.chart .row .chart_right .chart_footer .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto 0px auto;
+  background-color: transparent;
+}
+.chart .row .chart_right .chart_footer .row .chart_footer_left {
+  width: 50%;
+  border-right: 2px solid #ddd;
+}
+.chart .row .chart_right .chart_footer .row .chart_footer_left hr {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 4px solid rgba(154, 205, 50, 1);
+  border-radius: 5px;
+  background-color: rgba(154, 205, 50, 1);
+  width: 70px;
+}
+.chart .row .chart_right .chart_footer .row .chart_footer_left span {
+  margin-bottom: 15px;
+  color: #a5b9d4;
+}
+.chart .row .chart_right .chart_footer .row .chart_footer_right hr {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 4px solid rgba(247, 202, 24, 1);
+  border-radius: 5px;
+  background-color: rgba(247, 202, 24, 1);
+  width: 70px;
+}
+.chart .row .chart_right .chart_footer .row .chart_footer_right span {
+  margin-bottom: 15px;
+  color: #a5b9d4;
+}
+/* A5B9D4 */
+/* 'rgba(154,205,50,0.7)', */
+/* .chart .row .chart_left #myChart2 {
+  width: 300px;
+  height: 300px;
+} */
+/* fee chart ================== */
+#fee_chart {
+  width: 94%;
+  margin: 25px auto;
+  background-color: #fff;
+  padding: 25px;
+}
+#fee_chart h1 {
+  color: #000;
+  margin: 15px 0px;
+}
+#fee_chart .fee_chart_inner {
+  width: 100%;
+}
