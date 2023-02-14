@@ -17,7 +17,7 @@ function studentFunc(evt, studentName) {
   document.getElementById("s_defaultOpen").click();
   // ajax section for teacher
   // ajax section started ======================================
-  /*
+  
   $(document).ready(function () {
     // fetch feMale count here ===================
     function fetchFemale_count() {
@@ -143,4 +143,4 @@ function studentFunc(evt, studentName) {
     $(document).on("click", "#hide_student_details_modal", function () {
       $("#view_student_detail_modal").hide();
     });
-  });  */
+  });  

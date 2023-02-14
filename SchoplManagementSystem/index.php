@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if(!isset($_SESSION['username'])){
+  header("location:assets/admin_login.php");
+}
+include "assets/conn/conn.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,175 +24,223 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/teacher.css">
+	
     <link rel="stylesheet" href="css/students.css">
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/teacher.css">
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/dashboard2.css" />
+    <link rel="stylesheet" href="css/admin2.css">
+    <link rel="stylesheet" href="css/student2.css">
+    <link rel="stylesheet" href="css/student3.css">
     <link rel="stylesheet" href="css/parent.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/exam.css">
+    <link rel="stylesheet" href="css/notice.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/transport.css">
+    <link rel="stylesheet" href="css/hostel.css">
+    <link rel="stylesheet" href="css/expenses.css">
     <link rel="stylesheet" href="css/add_admin.css">
 
 </head>
 	<body>
 	  <main>
-        <section class="admin-top">
-            <div class="row">
-                <div class="admin-left " id="slideNav">
-                    <div class="admin">
-                        <img src="images/me3.jpg" alt="profile pic">
-                        <h4>Eben Keys</h4>
-                    </div>
-                    <div class="tab">
-                        <div class="tablinks" id='defaultOpen' onclick="openTab(event, 'dashboard_top')" >
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span class="tooltip">Dashboard</span>
-                            <h4>Dashboard</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'teacher_top')">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <span class="tooltip">Teacher</span>
-                            <h4>Teacher</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'students')">
-                            <i class="fas fa-user"></i>
-                            <span class="tooltip">Student</span>
-                            <h4>Student</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'parent')">
-                            <i class="fas fa-user"></i>
-                            <span class="tooltip">Parent</span>
-                            <h4>Parent</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'schedule')">
-                            <i class="fas fa-clock"></i>
-                            <span class="tooltip">Schedule</span>
-                            <h4>Schedule</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'admin')">
-                            <i class="fas fa-chart-bar"></i>
-                            <span class="tooltip">Admin</span>
-                            <h4>Admin</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'library')">
-                            <i class="fas fa-folder-open"></i>
-                            <span class="tooltip">Library</span>
-                            <h4>Library</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'media')">
-                            <i class="fas fa-video"></i>
-                            <span class="tooltip">Media</span>
-                            <h4>Media</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'expenses')">
-                            <i class="fas fa-money-check-alt"></i>
-                            <span class="tooltip">Expenses</span>
-                            <h4>Expenses</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'hostel')">
-                            <i class="fas fa-hotel"></i>
-                            <span class="tooltip">Hostel</span>
-                            <h4>Hostel</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'transport')">
-                            <i class="fas fa-car"></i>
-                            <span class="tooltip">Transport</span>
-                            <h4>Transport</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'exam')">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span class="tooltip">Exams</span>
-                            <h4>Exams</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'events')">
-                            <i class="fas fa-clock"></i>
-                            <span class="tooltip">Event</span>
-                            <h4>Event</h4>
-                        </div>
-
-                        <div class="tablinks"  onclick="openTab(event, 'map')">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="tooltip">Map</span>
-                            <h4>Map</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="admin-right" id="admin-right">
-                    <div class="header">
-                        <div class="header-left">
-                        <i onclick="menuAnimation()" class="fa-solid fa-bars menu-bars"></i>
-                        </div>
-                        <div class="header-right">
-                            haha
-                        </div>
-                    </div>
-                    <div id="dashboard_top" class="tabcontent">
-                        <?php include "assets/dashboard.php" ?>
-                    </div>
-
-                    <div id="teacher_top" class="tabcontent">
-                        <?php include "assets/teacher.php" ?>
-                    </div>
-
-                    <div id="students" class="tabcontent">
-                        <?php include "assets/students.php" ?>
-                    </div>
-
-                    <div id="parent" class="tabcontent">
-                        <?php include "assets/parent.php" ?>
-                    </div>
-
-                    <div id="schedule" class="tabcontent">
-                        <h2>Schedule  Content</h2>
-                    </div>
-
-                    <div id="admin" class="tabcontent">
-                        <?php include "assets/add_admin.php" ?>
-                    </div>
-
-                    <div id="library" class="tabcontent">
-                        <h2>Library  Content</h2>
-                    </div>
-
-                    <div id="media" class="tabcontent">
-                        <h2>Media  Content</h2>
-                    </div>
-
-                    <div id="expenses" class="tabcontent">
-                        <h2>Expenses  Content</h2>
-                    </div>
-
-                    <div id="hostel" class="tabcontent">
-                        <h2>Hostel  Content</h2>
-                    </div>
-
-                    <div id="transport" class="tabcontent">
-                        <h2>Transport  Content</h2>
-                    </div>
-
-                    <div id="exam" class="tabcontent">
-                        <h2>Exams  Content</h2>
-                    </div>
-
-                    <div id="events" class="tabcontent">
-                        <h2>Events  Content</h2>
-                    </div>
-
-                    <div id="map" class="tabcontent">
-                        <h2>Map  Content</h2>
-                    </div>
-                </div>
+      <section class="admin-top">
+        <div class="row">
+            <div class="admin-left" id="slideNav">
+                <div class="admin">
+                    <img src="<?php echo $_SESSION['image']; ?>" alt="">  
+            <h1 style="text-align:center;"><?php echo $_SESSION['username']; ?></h1>
+          </div>
+            <div class="tab">
+            <div
+              class="tablinks"
+              onclick="openCity(event, 'dashboard_top')"
+              id="defaultOpen"
+            >
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="tooltip">Dashboard</span>
+              <h4>Dashboard</h4>
             </div>
+            <div class="tablinks" onclick="openCity(event, 'teacher_top')">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span class="tooltip">Teacher</span>
+              <h4>Teacher</h4>
+            </div>
+            <!-- students section start ============================== -->
+            <div class="tablinks" onclick="openCity(event, 'student')">
+              <i class="fas fa-users"></i>
+              <span class="tooltip">Students</span>
+              <h4>Students</h4>
+            </div>
+            <!-- students section start ============================== -->
+            <div class="tablinks" onclick="openCity(event, 'parent')">
+              <i class="fas fa-calendar-alt"></i>
+              <span class="tooltip">Parents</span>
+              <h4>Parents</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'schedule')">
+              <i class="fas fa-clock"></i>
+              <span class="tooltip2">Classes Schedule</span>
+              <h4>Classes Schedule</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'admin')">
+              <i class="far fa-chart-bar"></i>
+              <span class="tooltip">Admin</span>
+              <h4>Admin</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'library')">
+              <i class="fas fa-folder-open"></i>
+              <span class="tooltip">Library</span>
+              <h4>Library</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'media')">
+              <i class="fas fa-video"></i>
+              <span class="tooltip">Media</span>
+              <h4>Media</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'expenses')">
+            <i class="fas fa-money-check-alt"></i>
+              <span class="tooltip">Expenses</span>
+              <h4>Expenses</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'hostel')">
+            <i class="fas fa-hotel"></i>
+              <span class="tooltip">Hostel</span>
+              <h4>Hostel</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'transport')">
+            <i class="fas fa-car"></i>
+              <span class="tooltip">Transport</span>
+              <h4>Transport</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'exam')">
+              <i class="fas fa-graduation-cap"></i>
+              <span class="tooltip2">Exams</span>
+              <h4>Exams</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'events')">
+              <i class="fas fa-clock"></i>
+              <span class="tooltip">Notices</span>
+              <h4>Notices</h4>
+            </div>
+            <div class="tablinks" onclick="openCity(event, 'map')">
+            <i class="fas fa-map-marker-alt"></i>
+              <span class="tooltip2">Map</span>
+              <h4>Map</h4>
+            </div>
+          </div>
+        </div>       
+                <!-- left section start -->
+        <div class="admin-right" id="admin-right">
+          <div class="header">
+            <div class="header-left">
+              <i class="fas fa-bars" onclick="menuAnimation()"></i>
+            </div>
+            <div class="header-right">
+              <div class="header-right-inner-right">
+                <img src="<?php echo $_SESSION['image']; ?>" onclick="admin()" class="adminImg" alt="Profile Image" />
+                <div id="admin_details" class="admin_details">
+                   <div class="admin_details_inner">
+                     <h3><?php echo $_SESSION['username']; ?></h3>
+                     <a href="assets/ajax/admin_ajax/logout.php" class="logoutBtn" id="logoutBtn">Logout</a>
+                   </div>
+                   <div class="admin_details_footer">
+                     <h4>Activity</h4>
+                     <div style="cursor:pointer;" class="admin_chat">
+                       <h3 style="color:#ddd;">Chat</h3>
+                       <span class='admin_msg_count'>08</span>
+                     </div>
+                     <h3 style="cursor:pointer;color:#ddd" >Recover Password</h3>
+                     <h4 style="margin:15px 0px 10px 0px;">My Account</h4>
+                   </div>
+                   <div class="admin_message_section">
+                       <div style='width:50%;border:1px solid #ddd;' class="admin_message_section_left">
+                         <div class="admin_message_chat">
+                         <i class="fas fa-comments"></i>
+                              <p style="font-size: 17px;letter-spacing:4px;">Message</p>
+                         </div>
+                       </div>
+                       <div style='width:50%;border:1px solid #ddd;'  class="admin_message_section_right">
+                       <div class="admin_message_support">
+                              <i class="fas fa-ticket-alt"></i>
+                              <p style="font-size: 17px;letter-spacing:4px;">Support Tickets</p>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="open_message">
+                       <button class="openMessage">Open Message</button>
+                     </div>
+                </div>
+              </div>
+              <div class="header-right-inner-left">
+                <!-- logout  -->
+              </div>
+            </div>
+          </div>
+             <!-- dashboard section start -------------------- -->
+          <div id="dashboard_top" class="tabcontent">
+            <?php include "assets/dashboard.php"; ?>
+          </div>
+            <!-- dashboard section end -------------------- -->
+          <!-- teacher section start ==================== -->
+          <div id="teacher_top" class="tabcontent">
+             <?php include "assets/teacher.php"; ?>
+          </div>
+           <!-- teacher section end ==================== -->
+
+
+            <!-- students section start ======================================= -->
+           <div id="student" class="tabcontent">
+           <?php include 'assets/students.php'; ?>
+          </div>
+           <!-- teacher section end ============================================ -->
+      <!-- parents section start ========================== -->
+          <div id="parent" class="tabcontent">
+               <?php include 'assets/parent.php'; ?>
+          </div>
+      <!-- parents section end ========================== -->
+          <div id="schedule" class="tabcontent">
+            <h3>Schedule</h3>
+            <p>London is the capital city of England.</p>
+          </div>
+
+          <div id="admin" class="tabcontent">
+           <?php include 'assets/add_admin.php'; ?>
+          </div>
+
+          <div id="library" class="tabcontent">
+          <?php include 'assets/library.php'; ?>
+          </div>
+          <div id="media" class="tabcontent">
+            <h3>Media</h3>
+            <p>London is the capital city of England.</p>
+          </div>
+
+          <div id="expenses" class="tabcontent">
+            <?php include 'assets/expenses.php';  ?>
+          </div>
+          <div id="hostel" class="tabcontent">
+           <?php include 'assets/hostel.php';  ?>
+          </div>
+
+          <div id="transport" class="tabcontent">
+          <?php include 'assets/transport.php';  ?>
+          </div>
+          <div id="exam" class="tabcontent">
+            <?php include 'assets/exam.php';  ?>
+          </div>
+          <div id="events" class="tabcontent">
+          <?php include 'assets/notices.php';  ?>
+          </div>
+          <div id="map" class="tabcontent">
+          <?php include 'assets/map.php';  ?>
+          </div>
+        </div>
+      </div>       
+            </div>
+          </div>
         </section>
         <script src="./js/app.js"></script>
         <script src="./js/admin.js"></script>
@@ -194,7 +250,7 @@
         <script src="./js/add_admin.js"></script>
       </main>
       <?php
-  /*  $sql = "SELECT COUNT(CASE WHEN UPPER(Gender) = 'male' THEN 1 END) Male,
+    $sql = "SELECT COUNT(CASE WHEN UPPER(Gender) = 'male' THEN 1 END) Male,
     COUNT(CASE WHEN UPPER(Gender) = 'female' THEN 1 END) Female
     FROM student";
     $fire = mysqli_query($conn,$sql);
@@ -212,11 +268,11 @@
     $newArray =array_merge($json,$json2);
     // echo json_encode($newArray);
     // echo json_encode($json2);
-        // $fetchMaleCount; */
+        // $fetchMaleCount; 
 
 ?>
 <?php
-   /* $sql2 = "SELECT COUNT(CASE WHEN UPPER(Gender) = 'male' THEN 1 END) Male,
+    $sql2 = "SELECT COUNT(CASE WHEN UPPER(Gender) = 'male' THEN 1 END) Male,
     COUNT(CASE WHEN UPPER(Gender) = 'female' THEN 1 END) Female
     FROM teacher";
     $fire2 = mysqli_query($conn,$sql2);
@@ -234,7 +290,7 @@
     $newTeacherArray = array_merge($jsonTeacher,$jsonTeacher2);
     // echo json_encode($newArray);
     // echo json_encode($json2);
-        // $fetchMaleCount; */
+        // $fetchMaleCount; 
 
 ?>
     <script>
