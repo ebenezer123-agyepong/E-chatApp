@@ -242,12 +242,25 @@ include "assets/conn/conn.php";
             </div>
           </div>
         </section>
-        <script src="./js/app.js"></script>
+        
         <script src="./js/admin.js"></script>
         <script src="./js/teacher.js"></script>
-        <script src="./js/student.js"></script>
+        
         <script src="./js/parent.js"></script>
-        <script src="./js/add_admin.js"></script>
+      
+
+        <script src="js/teacherFile.js"></script> 
+        <script src="js/app.js"></script>
+        <script src="js/student.js"></script>
+        <script src="js/libraryFile.js"></script>
+        <script src="js/chart.js"></script>
+        <script src="js/parentFile.js"></script>
+        <script src="js/exam.js"></script>
+        <script src="js/notice.js"></script>
+        <script src="js/transport.js"></script>
+        <script src="js/hostel.js"></script>
+        <script src="js/expenses.js"></script>
+        <script src="js/add_admin.js"></script>
       </main>
       <?php
     $sql = "SELECT COUNT(CASE WHEN UPPER(Gender) = 'male' THEN 1 END) Male,

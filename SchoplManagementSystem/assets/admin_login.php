@@ -147,7 +147,7 @@ input[type="password"] {
         <div class="row2">
             <div class="left">
                 <h3>Welcome To</h3>
-                <h2>Islamic School System</h2>
+                <h2>Eben School System</h2>
                 <p>lorem assumenda doloremque laborum eaque neque magnam!
                 Ullam assumenda doloremque laborum eaque neque magnam!
                 Ullam assumenda doloremque laborum eaque neque magnam!
@@ -222,7 +222,5 @@ input[type="password"] {
     </script>
 
         <script src="../js/admin_login.js"></script>
-
-
 </body>
 </html>
