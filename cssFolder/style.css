@@ -655,3 +655,13 @@ img{
 .portfolio__button:hover .button__icon{
     transform: translateX(.25rem);
 }
+
+ .swiper-button-prev::after,
+ .swiper-button-next::after{
+    content: '';
+ }
+
+ .swiper-portfolio-icon{
+    font-size: 2rem;
+    color: var(--first-color);
+ }
