@@ -3,5 +3,9 @@
         "Btns",
         "IPMC",
         "moddal"
-    ]
+    ],
+    "cSpell.ignoreWords": [
+        "swiper"
+    ],
+    "liveServer.settings.port": 5501
 }
